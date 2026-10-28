@@ -1,0 +1,470 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1634" viewBox="0 0 1120 1634" role="img" aria-labelledby="title desc">
+<title id="title">Benchmark Results</title>
+<desc id="desc">Seven-model comparison transcribed from the supplied image, including parameter counts, Average and 30 benchmark rows. Spark-X2.6-1.7B is highlighted; the final 4B column is a reference. Evaluation notes appear below the table.</desc>
+<rect x="0" y="0" width="1120" height="2000" fill="#FFFFFF" rx="0"/>
+<text x="20" y="38" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#172B4D" text-anchor="start">Benchmark Results</text>
+<rect x="20" y="61" width="240" height="76" fill="#F1F4F9" rx="6"/>
+<text x="34" y="106" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="#56657B" text-anchor="start">Benchmark</text>
+<rect x="260" y="61" width="120" height="76" fill="#315DDD" rx="0"/>
+<text x="320" y="92" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Spark</text>
+<text x="320" y="118" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">X2.6-1.7B</text>
+<rect x="380" y="61" width="120" height="76" fill="#F1F4F9" rx="0"/>
+<text x="440" y="92" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#354156" text-anchor="middle">Spark</text>
+<text x="440" y="118" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#354156" text-anchor="middle">X2.5-1.7B</text>
+<rect x="500" y="61" width="120" height="76" fill="#F1F4F9" rx="0"/>
+<text x="560" y="92" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#354156" text-anchor="middle">Qwen3.5</text>
+<text x="560" y="118" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#354156" text-anchor="middle">2B</text>
+<rect x="620" y="61" width="120" height="76" fill="#F1F4F9" rx="0"/>
+<text x="680" y="92" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#354156" text-anchor="middle">Gemma4</text>
+<text x="680" y="118" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#354156" text-anchor="middle">E2B</text>
+<rect x="740" y="61" width="120" height="76" fill="#F1F4F9" rx="0"/>
+<text x="800" y="92" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#354156" text-anchor="middle">MiniCPM5</text>
+<text x="800" y="118" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#354156" text-anchor="middle">2B</text>
+<rect x="860" y="61" width="120" height="76" fill="#F1F4F9" rx="0"/>
+<text x="920" y="92" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#354156" text-anchor="middle">LFM2.5-</text>
+<text x="920" y="118" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#354156" text-anchor="middle">2.6B</text>
+<rect x="980" y="61" width="120" height="76" fill="#F1F3F6" rx="0"/>
+<text x="1040" y="92" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#718096" text-anchor="middle">Spark</text>
+<text x="1040" y="118" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#718096" text-anchor="middle">X2.6-4B</text>
+<rect x="20" y="137" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="137" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<text x="34" y="161" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="500" fill="#728096" text-anchor="start">Total parameters</text>
+<text x="320.0" y="161" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" fill="#214FCE" text-anchor="middle">1.7B</text>
+<text x="440.0" y="161" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#728096" text-anchor="middle">1.7B</text>
+<text x="560.0" y="161" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#728096" text-anchor="middle">2.3B</text>
+<text x="680.0" y="161" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="400" fill="#728096" text-anchor="middle">5.1B (2.3B)</text>
+<text x="800.0" y="161" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#728096" text-anchor="middle">2.5B</text>
+<text x="920.0" y="161" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#728096" text-anchor="middle">2.7B</text>
+<text x="1040.0" y="161" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#728096" text-anchor="middle">4.1B</text>
+<path d="M20 172 L1100 172" stroke="#E5EAF1" stroke-width="1"/>
+<rect x="20" y="172" width="1080" height="55" fill="#E9EFFC" rx="0"/>
+<rect x="260" y="172" width="120" height="55" fill="#DCE7FF" rx="0"/>
+<text x="34" y="207" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#203B72" text-anchor="start">Average</text>
+<text x="320.0" y="208" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#214FCE" text-anchor="middle">49.6</text>
+<text x="440.0" y="208" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#203B72" text-anchor="middle">35.8</text>
+<text x="560.0" y="208" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#203B72" text-anchor="middle">22.0</text>
+<text x="680.0" y="208" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#203B72" text-anchor="middle">22.5</text>
+<text x="800.0" y="208" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#203B72" text-anchor="middle">46.9</text>
+<text x="920.0" y="208" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#203B72" text-anchor="middle">30.4</text>
+<text x="1040.0" y="208" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#718096" text-anchor="middle">63.3</text>
+<rect x="20" y="227" width="1080" height="29" fill="#EDF1F7" rx="0"/>
+<rect x="20" y="233" width="3" height="17" fill="#6D83AF" rx="1"/>
+<text x="33" y="247" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#4A6085" text-anchor="start">Agent</text>
+<rect x="20" y="256" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="256" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="256" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="280" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">BFCL-V4</text>
+<text x="320.0" y="279.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">55.2</text>
+<text x="440.0" y="279.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">46.9</text>
+<text x="560.0" y="279.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">43.6*</text>
+<text x="680.0" y="279.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">36.6*</text>
+<text x="800.0" y="279.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">66.6*</text>
+<text x="920.0" y="279.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">61.1*</text>
+<text x="1040.0" y="279.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">71.8</text>
+<path d="M20 291 L1100 291" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 256 L980 291" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="291" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="291" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="291" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="315" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">τ²-bench</text>
+<text x="320.0" y="314.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">85.3</text>
+<text x="440.0" y="314.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">65.3</text>
+<text x="560.0" y="314.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">48.8*</text>
+<text x="680.0" y="314.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">24.5*</text>
+<text x="800.0" y="314.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">82.2</text>
+<text x="920.0" y="314.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">69.7</text>
+<text x="1040.0" y="314.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">86.9</text>
+<path d="M20 326 L1100 326" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 291 L980 326" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="326" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="326" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="326" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="350" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">τ³-bench Banking</text>
+<text x="320.0" y="349.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">21.3</text>
+<text x="440.0" y="349.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">20.1</text>
+<text x="560.0" y="349.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">4.1</text>
+<text x="680.0" y="349.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">8.8</text>
+<text x="800.0" y="349.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">20.8*</text>
+<text x="920.0" y="349.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">7.1</text>
+<text x="1040.0" y="349.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">34.7</text>
+<path d="M20 361 L1100 361" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 326 L980 361" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="361" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="361" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="361" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="385" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">VitaBench2.0</text>
+<text x="320.0" y="384.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">22.6</text>
+<text x="440.0" y="384.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">8.3</text>
+<text x="560.0" y="384.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">5.2</text>
+<text x="680.0" y="384.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">4.4</text>
+<text x="800.0" y="384.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">3.4</text>
+<text x="920.0" y="384.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">3.7</text>
+<text x="1040.0" y="384.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">30.8</text>
+<path d="M20 396 L1100 396" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 361 L980 396" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="396" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="396" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="396" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="420" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">MCP-Atlas</text>
+<text x="320.0" y="419.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">41.8</text>
+<text x="440.0" y="419.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">23.4</text>
+<text x="560.0" y="419.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">14.8</text>
+<text x="680.0" y="419.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">12.6</text>
+<text x="800.0" y="419.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">32.2</text>
+<text x="920.0" y="419.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">3.0</text>
+<text x="1040.0" y="419.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">62.4</text>
+<path d="M20 431 L1100 431" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 396 L980 431" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="431" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="431" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="431" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="455" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">EnterpriseOps-Gym</text>
+<text x="320.0" y="454.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">26.1</text>
+<text x="440.0" y="454.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">10.5</text>
+<text x="560.0" y="454.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">6.8</text>
+<text x="680.0" y="454.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">8.6</text>
+<text x="800.0" y="454.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">14.8</text>
+<text x="920.0" y="454.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="1040.0" y="454.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">33.6</text>
+<path d="M20 466 L1100 466" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 431 L980 466" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="466" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="466" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="466" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="490" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">ClawEval-EN</text>
+<text x="320.0" y="489.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">66.9</text>
+<text x="440.0" y="489.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">57.9</text>
+<text x="560.0" y="489.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">47.7</text>
+<text x="680.0" y="489.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">53.1*</text>
+<text x="800.0" y="489.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">58.4</text>
+<text x="920.0" y="489.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">62.9*</text>
+<text x="1040.0" y="489.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">69.9</text>
+<path d="M20 501 L1100 501" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 466 L980 501" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="501" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="501" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="501" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="525" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">BrowseComp</text>
+<text x="320.0" y="524.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">41.7</text>
+<text x="440.0" y="524.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">29.7</text>
+<text x="560.0" y="524.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">3.1</text>
+<text x="680.0" y="524.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">3.7</text>
+<text x="800.0" y="524.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">23.4</text>
+<text x="920.0" y="524.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">16.6</text>
+<text x="1040.0" y="524.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">53.1</text>
+<path d="M20 536 L1100 536" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 501 L980 536" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="536" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="536" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="536" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="560" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">SWebBench</text>
+<text x="320.0" y="559.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">53.9</text>
+<text x="440.0" y="559.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">31.6</text>
+<text x="560.0" y="559.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">22.8</text>
+<text x="680.0" y="559.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">15.6</text>
+<text x="800.0" y="559.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">45.7</text>
+<text x="920.0" y="559.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="1040.0" y="559.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">71.7</text>
+<path d="M20 571 L1100 571" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 536 L980 571" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="571" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="571" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="571" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="595" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">PAgentBench</text>
+<text x="320.0" y="594.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">58.8</text>
+<text x="440.0" y="594.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">51.1</text>
+<text x="560.0" y="594.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">34.9</text>
+<text x="680.0" y="594.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">32.8</text>
+<text x="800.0" y="594.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">59.5</text>
+<text x="920.0" y="594.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="1040.0" y="594.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">74.1</text>
+<path d="M20 606 L1100 606" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 571 L980 606" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="606" width="1080" height="29" fill="#EDF1F7" rx="0"/>
+<rect x="20" y="612" width="3" height="17" fill="#6D83AF" rx="1"/>
+<text x="33" y="626" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#4A6085" text-anchor="start">Code</text>
+<rect x="20" y="635" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="635" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="635" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="659" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">SWE Pro</text>
+<text x="320.0" y="658.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">26.7</text>
+<text x="440.0" y="658.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">10.4</text>
+<text x="560.0" y="658.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">1.9</text>
+<text x="680.0" y="658.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="800.0" y="658.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">14.4*</text>
+<text x="920.0" y="658.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">0.6*</text>
+<text x="1040.0" y="658.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">54.3</text>
+<path d="M20 670 L1100 670" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 635 L980 670" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="670" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="670" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="670" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="694" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">SWE Verified</text>
+<text x="320.0" y="693.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">59.8</text>
+<text x="440.0" y="693.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">28.3</text>
+<text x="560.0" y="693.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">6.8</text>
+<text x="680.0" y="693.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="800.0" y="693.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">46.4*</text>
+<text x="920.0" y="693.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">6.0*</text>
+<text x="1040.0" y="693.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">62.8</text>
+<path d="M20 705 L1100 705" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 670 L980 705" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="705" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="705" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="705" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="729" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">SWE Multilingual</text>
+<text x="320.0" y="728.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">57.3</text>
+<text x="440.0" y="728.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">23.3</text>
+<text x="560.0" y="728.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">5.0</text>
+<text x="680.0" y="728.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="800.0" y="728.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">23.7</text>
+<text x="920.0" y="728.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">5.3</text>
+<text x="1040.0" y="728.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">64.7</text>
+<path d="M20 740 L1100 740" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 705 L980 740" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="740" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="740" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="740" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="764" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">SciCode</text>
+<text x="320.0" y="763.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">20.1</text>
+<text x="440.0" y="763.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">18.2</text>
+<text x="560.0" y="763.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">6.0</text>
+<text x="680.0" y="763.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">20.5</text>
+<text x="800.0" y="763.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">26.3*</text>
+<text x="920.0" y="763.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">14.2*</text>
+<text x="1040.0" y="763.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">36.8</text>
+<path d="M20 775 L1100 775" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 740 L980 775" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="775" width="1080" height="29" fill="#EDF1F7" rx="0"/>
+<rect x="20" y="781" width="3" height="17" fill="#6D83AF" rx="1"/>
+<text x="33" y="795" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#4A6085" text-anchor="start">Math</text>
+<rect x="20" y="804" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="804" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="804" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="828" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">Gaokao 2026</text>
+<text x="320.0" y="827.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">118.9</text>
+<text x="440.0" y="827.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">114.8</text>
+<text x="560.0" y="827.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">94.0</text>
+<text x="680.0" y="827.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">81.8</text>
+<text x="800.0" y="827.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">107.9</text>
+<text x="920.0" y="827.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">93.8</text>
+<text x="1040.0" y="827.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">134.9</text>
+<path d="M20 839 L1100 839" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 804 L980 839" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="839" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="839" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="839" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="863" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">AIME 2026</text>
+<text x="320.0" y="862.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">70.1</text>
+<text x="440.0" y="862.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">69.4</text>
+<text x="560.0" y="862.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">30.8</text>
+<text x="680.0" y="862.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">37.5*</text>
+<text x="800.0" y="862.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">86.5*</text>
+<text x="920.0" y="862.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">45.2*</text>
+<text x="1040.0" y="862.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">91.2</text>
+<path d="M20 874 L1100 874" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 839 L980 874" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="874" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="874" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="874" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="898" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">HMMT Feb 26</text>
+<text x="320.0" y="897.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">48.8</text>
+<text x="440.0" y="897.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">48.4</text>
+<text x="560.0" y="897.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">21.5</text>
+<text x="680.0" y="897.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">20.5</text>
+<text x="800.0" y="897.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">63.8*</text>
+<text x="920.0" y="897.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">33.7*</text>
+<text x="1040.0" y="897.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">81.3</text>
+<path d="M20 909 L1100 909" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 874 L980 909" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="909" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="909" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="909" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="933" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">IMO-AnswerBench</text>
+<text x="320.0" y="932.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">47.1</text>
+<text x="440.0" y="932.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">45.4</text>
+<text x="560.0" y="932.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="680.0" y="932.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">22.6</text>
+<text x="800.0" y="932.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">63.9</text>
+<text x="920.0" y="932.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">41.2</text>
+<text x="1040.0" y="932.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">75.2</text>
+<path d="M20 944 L1100 944" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 909 L980 944" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="944" width="1080" height="29" fill="#EDF1F7" rx="0"/>
+<rect x="20" y="950" width="3" height="17" fill="#6D83AF" rx="1"/>
+<text x="33" y="964" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#4A6085" text-anchor="start">Long Context</text>
+<rect x="20" y="973" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="973" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="973" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="997" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">AA-LCRv1.1</text>
+<text x="320.0" y="996.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">48.0</text>
+<text x="440.0" y="996.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">42.3</text>
+<text x="560.0" y="996.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">21.0*</text>
+<text x="680.0" y="996.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">16.3*</text>
+<text x="800.0" y="996.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">59.3*</text>
+<text x="920.0" y="996.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">5.7*</text>
+<text x="1040.0" y="996.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">67.3</text>
+<path d="M20 1008 L1100 1008" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 973 L980 1008" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="1008" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="1008" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="1008" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="1032" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">LongBench v2</text>
+<text x="320.0" y="1031.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">40.4</text>
+<text x="440.0" y="1031.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">33.2</text>
+<text x="560.0" y="1031.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">38.7*</text>
+<text x="680.0" y="1031.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">20.5</text>
+<text x="800.0" y="1031.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">43.7*</text>
+<text x="920.0" y="1031.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">30.3*</text>
+<text x="1040.0" y="1031.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">53.3</text>
+<path d="M20 1043 L1100 1043" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 1008 L980 1043" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="1043" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="1043" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="1043" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="1067" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">Graphwalks bfs 256k f1</text>
+<text x="320.0" y="1066.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">85.1</text>
+<text x="440.0" y="1066.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">28.6</text>
+<text x="560.0" y="1066.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">60.2</text>
+<text x="680.0" y="1066.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">42.5</text>
+<text x="800.0" y="1066.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">71.1</text>
+<text x="920.0" y="1066.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">27.0</text>
+<text x="1040.0" y="1066.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">92.2</text>
+<path d="M20 1078 L1100 1078" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 1043 L980 1078" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="1078" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="1078" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="1078" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="1102" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">Graphwalks bfs 1m f1</text>
+<text x="320.0" y="1101.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">25.7</text>
+<text x="440.0" y="1101.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">3.0</text>
+<text x="560.0" y="1101.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">7.7</text>
+<text x="680.0" y="1101.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="800.0" y="1101.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="920.0" y="1101.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="1040.0" y="1101.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">34.2</text>
+<path d="M20 1113 L1100 1113" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 1078 L980 1113" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="1113" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="1113" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="1113" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="1137" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="500" fill="#354156" text-anchor="start">Openai_MRCR v2 256k-512k</text>
+<text x="320.0" y="1136.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">56.1</text>
+<text x="440.0" y="1136.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">4.8</text>
+<text x="560.0" y="1136.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">16.9</text>
+<text x="680.0" y="1136.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="800.0" y="1136.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="920.0" y="1136.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="1040.0" y="1136.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">65.6</text>
+<path d="M20 1148 L1100 1148" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 1113 L980 1148" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="1148" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="1148" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="1148" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="1172" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="500" fill="#354156" text-anchor="start">Openai_MRCR v2 512k-1M</text>
+<text x="320.0" y="1171.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">19.9</text>
+<text x="440.0" y="1171.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">0.9</text>
+<text x="560.0" y="1171.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">6.0</text>
+<text x="680.0" y="1171.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="800.0" y="1171.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="920.0" y="1171.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#A0A8B5" text-anchor="middle">-</text>
+<text x="1040.0" y="1171.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">26.0</text>
+<path d="M20 1183 L1100 1183" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 1148 L980 1183" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="1183" width="1080" height="29" fill="#EDF1F7" rx="0"/>
+<rect x="20" y="1189" width="3" height="17" fill="#6D83AF" rx="1"/>
+<text x="33" y="1203" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#4A6085" text-anchor="start">General &amp; Knowledge</text>
+<rect x="20" y="1212" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="1212" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="1212" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="1236" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">IFEval</text>
+<text x="320.0" y="1235.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">89.4</text>
+<text x="440.0" y="1235.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">89.5</text>
+<text x="560.0" y="1235.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">78.6*</text>
+<text x="680.0" y="1235.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">34.8</text>
+<text x="800.0" y="1235.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">86.7*</text>
+<text x="920.0" y="1235.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">93.4*</text>
+<text x="1040.0" y="1235.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">93.6</text>
+<path d="M20 1247 L1100 1247" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 1212 L980 1247" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="1247" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="1247" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="1247" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="1271" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">IFBench</text>
+<text x="320.0" y="1270.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">65.5</text>
+<text x="440.0" y="1270.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">66.3</text>
+<text x="560.0" y="1270.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">41.3*</text>
+<text x="680.0" y="1270.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">22.7</text>
+<text x="800.0" y="1270.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">66.3*</text>
+<text x="920.0" y="1270.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">59.2*</text>
+<text x="1040.0" y="1270.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">75.8</text>
+<path d="M20 1282 L1100 1282" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 1247 L980 1282" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="1282" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="1282" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="1282" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="1306" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">HLE(w/o tools)</text>
+<text x="320.0" y="1305.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">8.7</text>
+<text x="440.0" y="1305.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">6.3</text>
+<text x="560.0" y="1305.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">2.1</text>
+<text x="680.0" y="1305.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">2.5</text>
+<text x="800.0" y="1305.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">8.9*</text>
+<text x="920.0" y="1305.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">6.2*</text>
+<text x="1040.0" y="1305.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">17.9</text>
+<path d="M20 1317 L1100 1317" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 1282 L980 1317" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="1317" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="1317" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="1317" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="1341" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">HLE(w tools)</text>
+<text x="320.0" y="1340.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">19.9</text>
+<text x="440.0" y="1340.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">6.9</text>
+<text x="560.0" y="1340.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">5.7</text>
+<text x="680.0" y="1340.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">6.6</text>
+<text x="800.0" y="1340.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">15.1</text>
+<text x="920.0" y="1340.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">5.9</text>
+<text x="1040.0" y="1340.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">36.9</text>
+<path d="M20 1352 L1100 1352" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 1317 L980 1352" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="1352" width="1080" height="35" fill="#FFFFFF" rx="0"/>
+<rect x="260" y="1352" width="120" height="35" fill="#EDF2FF" rx="0"/>
+<rect x="980" y="1352" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="1376" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">GPQA</text>
+<text x="320.0" y="1375.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">51.3</text>
+<text x="440.0" y="1375.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">43.8</text>
+<text x="560.0" y="1375.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">44.6</text>
+<text x="680.0" y="1375.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">43.8</text>
+<text x="800.0" y="1375.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">55.1</text>
+<text x="920.0" y="1375.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">60.7</text>
+<text x="1040.0" y="1375.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">69.9</text>
+<path d="M20 1387 L1100 1387" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 1352 L980 1387" stroke="#D6DDE8" stroke-width="1"/>
+<rect x="20" y="1387" width="1080" height="35" fill="#FAFBFD" rx="0"/>
+<rect x="260" y="1387" width="120" height="35" fill="#E8EFFF" rx="0"/>
+<rect x="980" y="1387" width="120" height="35" fill="#F6F7F9" rx="0"/>
+<text x="34" y="1411" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" fill="#354156" text-anchor="start">GPQA Diamond</text>
+<text x="320.0" y="1410.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#214FCE" text-anchor="middle">56.1</text>
+<text x="440.0" y="1410.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">46.8</text>
+<text x="560.0" y="1410.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">58.5</text>
+<text x="680.0" y="1410.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">43.4*</text>
+<text x="800.0" y="1410.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#354156" text-anchor="middle">70.2*</text>
+<text x="920.0" y="1410.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#354156" text-anchor="middle">55.8*</text>
+<text x="1040.0" y="1410.5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#718096" text-anchor="middle">77.1</text>
+<path d="M20 1422 L1100 1422" stroke="#E5EAF1" stroke-width="1"/>
+<path d="M980 1387 L980 1422" stroke="#D6DDE8" stroke-width="1"/>
+<text x="21" y="1451" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start">•</text>
+<text x="34" y="1451" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start">* denotes reported results from publicly-released model cards / papers and - denotes scores not yet available. Spark-X2.6-4B is included as a reference.</text>
+<text x="21" y="1478" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start">•</text>
+<text x="34" y="1478" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start">All evaluations are conducted in thinking mode. Spark-X2.6-1.7B and Spark-X2.6-4B are evaluated with the thinking level set to high. The recommended sampling parameters for both</text>
+<text x="34" y="1498" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start">models are temperature=1.0, top_p=0.95, and top_k=-1.</text>
+<text x="21" y="1525" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start">•</text>
+<text x="34" y="1525" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start">Gaokao 2026 consists of the five 2026 Chinese GAOKAO examinations (National I, National II, Beijing, Shanghai, Tianjin), each graded out of 150 points. Dataset:</text>
+<text x="34" y="1545" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start"></text>
+<a href="https://huggingface.co/datasets/XHToken/gaokao_math_2026" target="_blank">
+<text x="34.0" y="1545" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#315DDD" text-anchor="start">https://huggingface.co/datasets/XHToken/gaokao_math_2026</text>
+</a>
+<text x="21" y="1572" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start">•</text>
+<text x="34" y="1572" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start">SWebBench: An in-house benchmark for web browsing, information retrieval, and research. It will be open-sourced soon.</text>
+<text x="21" y="1599" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start">•</text>
+<text x="34" y="1599" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#728096" text-anchor="start">PAgentBench (Personal Assistant Benchmark): An in-house benchmark for personal task management, file operations, and system interactions. It will be open-sourced soon.</text>
+</svg>

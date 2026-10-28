@@ -1,7 +1,7 @@
 <p align="center">
   <img src="assets/xhtoken.png" width="15%" />
 </p>
-<h1 align="center">Spark-X2.6-4B: Advancing the Frontier of On-Device Agents for Real-World Tasks</h1>
+<h1 align="center">Spark-X2.6-4B & 1.7B: Advancing the Frontier of On-Device Agents for Real-World Tasks</h1>
 
 <div align="center">
 
@@ -19,27 +19,25 @@
 Welcome to the GitHub repository of Spark-X2.6 open model series. You can find official information about Spark-X2.6, and post your questions [here(Issues)](https://github.com/XHToken/Spark-X2.6/issues).
 
 <p align="center">
-  <img src="assets/benchmark.svg" />
+  <img src="assets/benchmark_spark26_4b.svg" />
 </p>
 
 ## Introduction
-A little over a month has passed since Spark-X2.5. In the rapidly evolving world of AI agents, that is enough time to rethink, refine, and move the frontier forward. Building on the Spark-X2.5-4B, we introduce **Spark-X2.6-4B**, the latest generation of our compact, general-purpose language models for on-device deployment. 
-
-Spark-X2.6-4B retains exactly the same architecture as Spark-X2.5-4B, achieving its capability gains through improved post-training. It delivers substantial improvements in coding, agent, long-context, multilingual, reasoning, etc. These advances enable more capable and practical on-device AI for developers and users tackling real-world tasks.
+Building on the Spark-X2.5, we introduce **Spark-X2.6-4B&1.7B**, the latest generation of our compact, general-purpose language models for on-device deployment. Spark-X2.6 retains exactly the same architecture as Spark-X2.5, achieving its capability gains through improved post-training. It delivers substantial improvements in coding, agent, long-context, multilingual, reasoning, etc. These advances enable more capable and practical on-device AI for developers and users tackling real-world tasks.
 
 **Technical Highlights**:
 - **Stronger Coding, Agentic, and Long-Context Capabilities**: The models deliver substantial improvements in agentic workflows involving complex tool use, multi-step planning, and software engineering. They achieve state-of-the-art performance among similarly sized open-source models, matching or even surpassing models with approximately 9B parameters.
 - **Controllable Thinking Budget**: The models provide three configurable thinking levels—none, low, high—allowing applications to balance reasoning quality, latency, and inference cost dynamically.
 
 ## Release
-
-- **[2026/10/21] 🚀 Global launch of the Spark-X2.6 model series on [Hugging Face](https://huggingface.co/collections/XHToken/spark-x26), [ModelScope](https://www.modelscope.cn/collections/XHToken/Spark-X26), [Ollama](https://ollama.com/SparkLLM).**
+- [2026/10/27] 🚀 Global launch of the Spark-X2.6-1.7B.
+- [2026/10/21] 🚀 Global launch of the Spark-X2.6-4B on [Hugging Face](https://huggingface.co/collections/XHToken/spark-x26), [ModelScope](https://www.modelscope.cn/collections/XHToken/Spark-X26), [Ollama](https://ollama.com/SparkLLM).
 - [2026/09/06] 🤝 Added native model architecture support for Spark‑X2.5 & X2.6 (Spark2_5ForCausalLM) in [llama.cpp](https://github.com/ggml-org/llama.cpp/releases/tag/b10829).
 - [2026/09/01] 🚀 Global launch of the Spark-X2.5 model series on [Hugging Face](https://huggingface.co/collections/XHToken/spark-x25), [ModelScope](https://www.modelscope.cn/collections/XHToken/Spark-X25), [Ollama](https://ollama.com/SparkLLM), [Modelers](https://modelers.cn/user/XHToken), and [SCNet](https://www.scnet.cn/ui/aihub/models/XHToken/Spark-X2.5-4B).
 
 ## Model Downloads
 
-Spark-X2.6-4B is available on the following platforms. Choose the most suitable download source for your region and environment:
+Spark-X2.6-4B&1.7B is available on the following platforms. Choose the most suitable download source for your region and environment:
 
 | Platform | Download | Description |
 | --- | --- | --- |
@@ -50,19 +48,34 @@ Spark-X2.6-4B is available on the following platforms. Choose the most suitable 
 
 ## Benchmarks
 We evaluate our models and compare them with leading on-device models of similar size across a broad range of tasks, including agent, code, math,  general and knowledge.
+
+### Spark-X2.6-4B
 Spark-X2.6-4B achieves best-in-class performance among models of comparable size, while matching or exceeding the performance of larger 9B models on several benchmarks.
 
 <p align="center">
-  <img src="./assets/all_benchmark.svg" alt="all Spark-X2.6 benchmarks" width="1010">
+  <img src="./assets/benchmark_list_sparkx26_4b.svg" alt="all Spark-X2.6-4B benchmarks" width="1010">
 </p>
 
+### Spark-X2.6-1.7B
+Spark-X2.6-1.7B surpasses models of comparable size on most benchmarks, delivering state-of-the-art results.
+
+<p align="center">
+  <img src="./assets/benchmark_list_sparkx26_1.7b.svg" alt="all Spark-X2.6-1.7B benchmarks" width="1010">
+</p>
 
 ## Edge Inference
+
+### Spark-X2.6-4B
 Spark-X2.6-4B delivers inference efficiency on par with or better than comparable on-device models, including Qwen3.5-4B and Gemma-E4B. It combines this efficiency with stronger capabilities, making it a practical choice for responsive, resource-conscious on-device AI.
 <p align="center">
-  <img src="./assets/inference.svg" alt="Spark-X2.6 inference" width="1010">
+  <img src="./assets/edge_inference_sparkx26_4b.svg" alt="Spark-X2.6 inference" width="1010">
 </p>
 
+### Spark-X2.6-1.7B
+Spark-X2.6-1.7B delivers leading decoding throughput at shorter context lengths among the on-device models we evaluated, including Qwen3.5-2B, MiniCPM-2B, and LFM2.5-2.6B. Moreover, our optimized llama.cpp implementation(https://github.com/XHToken/llama.cpp) amplifies this performance advantage across all tested context lengths on the RTX 4090, underscoring its strong efficiency for responsive local AI.
+<p align="center">
+  <img src="./assets/edge_inference_sparkx26_1.7b.svg" alt="Spark-X2.6 inference" width="1010">
+</p>
 
 
 ## Quickstart
@@ -462,7 +475,7 @@ If you find our work helpful, feel free to give us a cite.
 
 ```bibtex
 @misc{sparkx2.6,
-    title  = {Spark-X2.6-4B: Advancing the Frontier of On-Device Agents for Real-World Tasks},
+    title  = {Spark-X2.6-4B&1.7B: Advancing the Frontier of On-Device Agents for Real-World Tasks},
     author = {SparkLLM Team},
     year   = {2026}
 }

@@ -1,0 +1,335 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="1510" viewBox="0 0 1440 1510" role="img" aria-labelledby="title desc">
+<title id="title">Spark-X2.6-1.7B inference speed</title><desc id="desc">Prefill and decode throughput across 4K, 32K and 128K context lengths. Two separate test groups. Higher is better. Missing measurements are omitted. Hardware: Mac M5 Pro, 16-core, and RTX 4090.</desc>
+<metadata>{&quot;contexts&quot;: [&quot;4K&quot;, &quot;32K&quot;, &quot;128K&quot;], &quot;metrics&quot;: [&quot;group1_prefill&quot;, &quot;group1_decode&quot;, &quot;group2_prefill&quot;, &quot;group2_decode&quot;], &quot;models&quot;: [&quot;Qwen3.5-2B&quot;, &quot;LFM2.5-2.6B&quot;, &quot;MiniCPM5-2B&quot;, &quot;Spark-X2.6-1.7B&quot;, &quot;Spark-X2.6-1.7B (optimized)&quot;], &quot;hardware&quot;: [&quot;Mac M5 Pro 16-core&quot;, &quot;RTX 4090&quot;], &quot;values&quot;: [[[5561.69, 4470.69, 2395.85], [4101.62, 3608.79, 2324.72], [4071.26, 2073.95, 727.78], [5885.68, 4481.14, 2202.09]], [[155.96, 129.49, 74.57], [156.16, 120.74, 68.04], [147.34, 81.47, 31.75], [174.6, 136.9, 72.34]], [[33200, 29568, 19359], [28259, 24000, 15253], [27768, 15535, 6005], [37527, 32166, 19597], [38283, 31814, 19187]], [[418, 355.5, 238.4], [385.1, 320, 203.4], [339.2, 232.4, 111.9], [444.7, 365.6, 231.9], [550.66, 437.31, 264.93]]]}</metadata>
+<rect width="1440" height="1510" fill="#FFFFFF"/>
+<g font-family="Inter,Arial,Helvetica,sans-serif">
+<text x="48" y="54" font-size="30" fill="#253047" font-weight="700" text-anchor="start" >Inference Speed</text>
+<text x="48" y="84" font-size="16" fill="#697489" font-weight="400" text-anchor="start" >Throughput across context lengths · Y-axes do not start at zero</text>
+<text x="1392" y="55" font-size="13" fill="#697489" font-weight="600" text-anchor="end" >TOKENS / SECOND  ↑</text>
+<text x="48" y="134" font-size="20" fill="#253047" font-weight="700" text-anchor="start" >Mac M5 Pro · 16-core</text>
+<text x="1392" y="134" font-size="14" fill="#697489" font-weight="400" text-anchor="end" >MLX · INT4 · KV: BF16</text>
+<line x1="48" y1="158" x2="74" y2="158" stroke="#3267AA" stroke-width="3" />
+<circle cx="61" cy="158" r="3.5" fill="#3267AA"/>
+<text x="83" y="162" font-size="13" fill="#4F5B70" font-weight="400" text-anchor="start" >Qwen3.5-2B</text>
+<line x1="720" y1="158" x2="746" y2="158" stroke="#269C96" stroke-width="3" />
+<circle cx="733" cy="158" r="3.5" fill="#269C96"/>
+<text x="755" y="162" font-size="13" fill="#4F5B70" font-weight="400" text-anchor="start" >LFM2.5-2.6B</text>
+<line x1="48" y1="183" x2="74" y2="183" stroke="#8970BD" stroke-width="3" />
+<circle cx="61" cy="183" r="3.5" fill="#8970BD"/>
+<text x="83" y="187" font-size="13" fill="#4F5B70" font-weight="400" text-anchor="start" >MiniCPM5-2B</text>
+<line x1="720" y1="183" x2="746" y2="183" stroke="#E55C89" stroke-width="3" />
+<circle cx="733" cy="183" r="3.5" fill="#E55C89"/>
+<text x="755" y="187" font-size="13" fill="#4F5B70" font-weight="600" text-anchor="start" >Spark-X2.6-1.7B</text>
+<rect x="48" y="231" width="656" height="444" rx="12" fill="#FAFBFD" stroke="#E8ECF2"/>
+<text x="70" y="263" font-size="18" fill="#253047" font-weight="700" text-anchor="start" >Prefill</text>
+<text x="682" y="263" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >tokens/s</text>
+<line x1="116" y1="618.0" x2="662" y2="618.0" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="622.0" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >500</text>
+<line x1="116" y1="553.6" x2="662" y2="553.6" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="557.6" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >1.6k</text>
+<line x1="116" y1="489.2" x2="662" y2="489.2" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="493.2" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >2.7k</text>
+<line x1="116" y1="424.8" x2="662" y2="424.8" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="428.8" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >3.8k</text>
+<line x1="116" y1="360.4" x2="662" y2="360.4" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="364.4" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >4.9k</text>
+<line x1="116" y1="296.0" x2="662" y2="296.0" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="300.0" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >6k</text>
+<text x="116.0" y="643" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >4K</text>
+<text x="389.0" y="643" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >32K</text>
+<text x="662.0" y="643" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >128K</text>
+<text x="389.0" y="663" font-size="12" fill="#798499" font-weight="400" text-anchor="middle" >Context length</text>
+<polyline points="116.00,321.66 389.00,385.53 662.00,507.01" fill="none" stroke="#3267AA" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="116.00" cy="321.66" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 4K | 5,561.69 tokens/s</title></circle>
+<circle cx="389.00" cy="385.53" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 32K | 4,470.69 tokens/s</title></circle>
+<circle cx="662.00" cy="507.01" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 128K | 2,395.85 tokens/s</title></circle>
+<polyline points="116.00,407.14 389.00,435.99 662.00,511.17" fill="none" stroke="#269C96" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="116.00" cy="407.14" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 4K | 4,101.62 tokens/s</title></circle>
+<circle cx="389.00" cy="435.99" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 32K | 3,608.79 tokens/s</title></circle>
+<circle cx="662.00" cy="511.17" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 128K | 2,324.72 tokens/s</title></circle>
+<polyline points="116.00,408.92 389.00,525.85 662.00,604.66" fill="none" stroke="#8970BD" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="116.00" cy="408.92" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 4K | 4,071.26 tokens/s</title></circle>
+<circle cx="389.00" cy="525.85" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 32K | 2,073.95 tokens/s</title></circle>
+<circle cx="662.00" cy="604.66" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 128K | 727.78 tokens/s</title></circle>
+<polyline points="116.00,302.69 389.00,384.92 662.00,518.35" fill="none" stroke="#E55C89" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="116.00" cy="302.69" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 4K | 5,885.68 tokens/s</title></circle>
+<circle cx="389.00" cy="384.92" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 32K | 4,481.14 tokens/s</title></circle>
+<circle cx="662.00" cy="518.35" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 128K | 2,202.09 tokens/s</title></circle>
+<rect x="736" y="231" width="656" height="444" rx="12" fill="#FAFBFD" stroke="#E8ECF2"/>
+<text x="758" y="263" font-size="18" fill="#253047" font-weight="700" text-anchor="start" >Decode</text>
+<text x="1370" y="263" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >tokens/s</text>
+<line x1="804" y1="618.0" x2="1350" y2="618.0" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="622.0" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >20</text>
+<line x1="804" y1="553.6" x2="1350" y2="553.6" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="557.6" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >52</text>
+<line x1="804" y1="489.2" x2="1350" y2="489.2" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="493.2" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >84</text>
+<line x1="804" y1="424.8" x2="1350" y2="424.8" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="428.8" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >116</text>
+<line x1="804" y1="360.4" x2="1350" y2="360.4" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="364.4" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >148</text>
+<line x1="804" y1="296.0" x2="1350" y2="296.0" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="300.0" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >180</text>
+<text x="804.0" y="643" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >4K</text>
+<text x="1077.0" y="643" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >32K</text>
+<text x="1350.0" y="643" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >128K</text>
+<text x="1077.0" y="663" font-size="12" fill="#798499" font-weight="400" text-anchor="middle" >Context length</text>
+<polyline points="804.00,344.38 1077.00,397.65 1350.00,508.18" fill="none" stroke="#3267AA" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="804.00" cy="344.38" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 4K | 155.96 tokens/s</title></circle>
+<circle cx="1077.00" cy="397.65" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 32K | 129.49 tokens/s</title></circle>
+<circle cx="1350.00" cy="508.18" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 128K | 74.57 tokens/s</title></circle>
+<polyline points="804.00,343.98 1077.00,415.26 1350.00,521.32" fill="none" stroke="#269C96" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="804.00" cy="343.98" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 4K | 156.16 tokens/s</title></circle>
+<circle cx="1077.00" cy="415.26" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 32K | 120.74 tokens/s</title></circle>
+<circle cx="1350.00" cy="521.32" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 128K | 68.04 tokens/s</title></circle>
+<polyline points="804.00,361.73 1077.00,494.29 1350.00,594.35" fill="none" stroke="#8970BD" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="804.00" cy="361.73" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 4K | 147.34 tokens/s</title></circle>
+<circle cx="1077.00" cy="494.29" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 32K | 81.47 tokens/s</title></circle>
+<circle cx="1350.00" cy="594.35" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 128K | 31.75 tokens/s</title></circle>
+<polyline points="804.00,306.87 1077.00,382.74 1350.00,512.67" fill="none" stroke="#E55C89" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="804.00" cy="306.87" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 4K | 174.6 tokens/s</title></circle>
+<circle cx="1077.00" cy="382.74" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 32K | 136.9 tokens/s</title></circle>
+<circle cx="1350.00" cy="512.67" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 128K | 72.34 tokens/s</title></circle>
+<text x="48" y="734" font-size="20" fill="#253047" font-weight="700" text-anchor="start" >RTX 4090</text>
+<text x="1392" y="734" font-size="14" fill="#697489" font-weight="400" text-anchor="end" >llama.cpp · Q4_K_M · KV: FP16</text>
+<line x1="48" y1="758" x2="74" y2="758" stroke="#3267AA" stroke-width="3" />
+<circle cx="61" cy="758" r="3.5" fill="#3267AA"/>
+<text x="83" y="762" font-size="13" fill="#4F5B70" font-weight="400" text-anchor="start" >Qwen3.5-2B</text>
+<line x1="720" y1="758" x2="746" y2="758" stroke="#269C96" stroke-width="3" />
+<circle cx="733" cy="758" r="3.5" fill="#269C96"/>
+<text x="755" y="762" font-size="13" fill="#4F5B70" font-weight="400" text-anchor="start" >LFM2.5-2.6B</text>
+<line x1="48" y1="783" x2="74" y2="783" stroke="#8970BD" stroke-width="3" />
+<circle cx="61" cy="783" r="3.5" fill="#8970BD"/>
+<text x="83" y="787" font-size="13" fill="#4F5B70" font-weight="400" text-anchor="start" >MiniCPM5-2B</text>
+<line x1="720" y1="783" x2="746" y2="783" stroke="#E55C89" stroke-width="3" />
+<circle cx="733" cy="783" r="3.5" fill="#E55C89"/>
+<text x="755" y="787" font-size="13" fill="#4F5B70" font-weight="600" text-anchor="start" >Spark-X2.6-1.7B</text>
+<line x1="48" y1="808" x2="74" y2="808" stroke="#AB2858" stroke-width="3" stroke-dasharray="6 4"/>
+<circle cx="61" cy="808" r="3.5" fill="#AB2858"/>
+<text x="83" y="812" font-size="13" fill="#4F5B70" font-weight="600" text-anchor="start" >Spark-X2.6-1.7B (optimized)</text>
+<rect x="48" y="831" width="656" height="444" rx="12" fill="#FAFBFD" stroke="#E8ECF2"/>
+<text x="70" y="863" font-size="18" fill="#253047" font-weight="700" text-anchor="start" >Prefill</text>
+<text x="682" y="863" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >tokens/s</text>
+<line x1="116" y1="1218.0" x2="662" y2="1218.0" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="1222.0" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >5k</text>
+<line x1="116" y1="1153.6" x2="662" y2="1153.6" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="1157.6" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >12k</text>
+<line x1="116" y1="1089.2" x2="662" y2="1089.2" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="1093.2" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >19k</text>
+<line x1="116" y1="1024.8" x2="662" y2="1024.8" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="1028.8" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >26k</text>
+<line x1="116" y1="960.4" x2="662" y2="960.4" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="964.4" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >33k</text>
+<line x1="116" y1="896.0" x2="662" y2="896.0" stroke="#E8ECF2" stroke-width="1" />
+<text x="104" y="900.0" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >40k</text>
+<text x="116.0" y="1243" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >4K</text>
+<text x="389.0" y="1243" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >32K</text>
+<text x="662.0" y="1243" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >128K</text>
+<text x="389.0" y="1263" font-size="12" fill="#798499" font-weight="400" text-anchor="middle" >Context length</text>
+<polyline points="116.00,958.56 389.00,991.97 662.00,1085.90" fill="none" stroke="#3267AA" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="116.00" cy="958.56" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 4K | 33,200 tokens/s</title></circle>
+<circle cx="389.00" cy="991.97" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 32K | 29,568 tokens/s</title></circle>
+<circle cx="662.00" cy="1085.90" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 128K | 19,359 tokens/s</title></circle>
+<polyline points="116.00,1004.02 389.00,1043.20 662.00,1123.67" fill="none" stroke="#269C96" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="116.00" cy="1004.02" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 4K | 28,259 tokens/s</title></circle>
+<circle cx="389.00" cy="1043.20" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 32K | 24,000 tokens/s</title></circle>
+<circle cx="662.00" cy="1123.67" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 128K | 15,253 tokens/s</title></circle>
+<polyline points="116.00,1008.53 389.00,1121.08 662.00,1208.75" fill="none" stroke="#8970BD" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="116.00" cy="1008.53" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 4K | 27,768 tokens/s</title></circle>
+<circle cx="389.00" cy="1121.08" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 32K | 15,535 tokens/s</title></circle>
+<circle cx="662.00" cy="1208.75" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 128K | 6,005 tokens/s</title></circle>
+<polyline points="116.00,918.75 389.00,968.07 662.00,1083.71" fill="none" stroke="#E55C89" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="116.00" cy="918.75" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 4K | 37,527 tokens/s</title></circle>
+<circle cx="389.00" cy="968.07" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 32K | 32,166 tokens/s</title></circle>
+<circle cx="662.00" cy="1083.71" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 128K | 19,597 tokens/s</title></circle>
+<polyline points="116.00,911.80 389.00,971.31 662.00,1087.48" fill="none" stroke="#AB2858" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<rect x="112.00" y="907.80" width="8" height="8" rx="1" fill="#AB2858" stroke="white" stroke-width="1"><title>Spark-X2.6-1.7B (optimized) | 4K | 38,283 tokens/s</title></rect>
+<rect x="385.00" y="967.31" width="8" height="8" rx="1" fill="#AB2858" stroke="white" stroke-width="1"><title>Spark-X2.6-1.7B (optimized) | 32K | 31,814 tokens/s</title></rect>
+<rect x="658.00" y="1083.48" width="8" height="8" rx="1" fill="#AB2858" stroke="white" stroke-width="1"><title>Spark-X2.6-1.7B (optimized) | 128K | 19,187 tokens/s</title></rect>
+<rect x="736" y="831" width="656" height="444" rx="12" fill="#FAFBFD" stroke="#E8ECF2"/>
+<text x="758" y="863" font-size="18" fill="#253047" font-weight="700" text-anchor="start" >Decode</text>
+<text x="1370" y="863" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >tokens/s</text>
+<line x1="804" y1="1218.0" x2="1350" y2="1218.0" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="1222.0" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >100</text>
+<line x1="804" y1="1153.6" x2="1350" y2="1153.6" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="1157.6" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >196</text>
+<line x1="804" y1="1089.2" x2="1350" y2="1089.2" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="1093.2" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >292</text>
+<line x1="804" y1="1024.8" x2="1350" y2="1024.8" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="1028.8" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >388</text>
+<line x1="804" y1="960.4" x2="1350" y2="960.4" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="964.4" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >484</text>
+<line x1="804" y1="896.0" x2="1350" y2="896.0" stroke="#E8ECF2" stroke-width="1" />
+<text x="792" y="900.0" font-size="12" fill="#798499" font-weight="400" text-anchor="end" >580</text>
+<text x="804.0" y="1243" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >4K</text>
+<text x="1077.0" y="1243" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >32K</text>
+<text x="1350.0" y="1243" font-size="13" fill="#58647A" font-weight="400" text-anchor="middle" >128K</text>
+<text x="1077.0" y="1263" font-size="12" fill="#798499" font-weight="400" text-anchor="middle" >Context length</text>
+<polyline points="804.00,1004.67 1077.00,1046.60 1350.00,1125.16" fill="none" stroke="#3267AA" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="804.00" cy="1004.67" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 4K | 418 tokens/s</title></circle>
+<circle cx="1077.00" cy="1046.60" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 32K | 355.5 tokens/s</title></circle>
+<circle cx="1350.00" cy="1125.16" r="4.5" fill="white" stroke="#3267AA" stroke-width="2.2"><title>Qwen3.5-2B | 128K | 238.4 tokens/s</title></circle>
+<polyline points="804.00,1026.75 1077.00,1070.42 1350.00,1148.64" fill="none" stroke="#269C96" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="804.00" cy="1026.75" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 4K | 385.1 tokens/s</title></circle>
+<circle cx="1077.00" cy="1070.42" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 32K | 320 tokens/s</title></circle>
+<circle cx="1350.00" cy="1148.64" r="4.5" fill="white" stroke="#269C96" stroke-width="2.2"><title>LFM2.5-2.6B | 128K | 203.4 tokens/s</title></circle>
+<polyline points="804.00,1057.54 1077.00,1129.18 1350.00,1210.02" fill="none" stroke="#8970BD" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="804.00" cy="1057.54" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 4K | 339.2 tokens/s</title></circle>
+<circle cx="1077.00" cy="1129.18" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 32K | 232.4 tokens/s</title></circle>
+<circle cx="1350.00" cy="1210.02" r="4.5" fill="white" stroke="#8970BD" stroke-width="2.2"><title>MiniCPM5-2B | 128K | 111.9 tokens/s</title></circle>
+<polyline points="804.00,986.76 1077.00,1039.83 1350.00,1129.52" fill="none" stroke="#E55C89" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="804.00" cy="986.76" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 4K | 444.7 tokens/s</title></circle>
+<circle cx="1077.00" cy="1039.83" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 32K | 365.6 tokens/s</title></circle>
+<circle cx="1350.00" cy="1129.52" r="4.5" fill="white" stroke="#E55C89" stroke-width="2.2"><title>Spark-X2.6-1.7B | 128K | 231.9 tokens/s</title></circle>
+<polyline points="804.00,915.68 1077.00,991.72 1350.00,1107.36" fill="none" stroke="#AB2858" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<rect x="800.00" y="911.68" width="8" height="8" rx="1" fill="#AB2858" stroke="white" stroke-width="1"><title>Spark-X2.6-1.7B (optimized) | 4K | 550.66 tokens/s</title></rect>
+<rect x="1073.00" y="987.72" width="8" height="8" rx="1" fill="#AB2858" stroke="white" stroke-width="1"><title>Spark-X2.6-1.7B (optimized) | 32K | 437.31 tokens/s</title></rect>
+<rect x="1346.00" y="1103.36" width="8" height="8" rx="1" fill="#AB2858" stroke="white" stroke-width="1"><title>Spark-X2.6-1.7B (optimized) | 128K | 264.93 tokens/s</title></rect>
+<line x1="48" y1="1322" x2="1392" y2="1322" stroke="#E8ECF2"/>
+<text x="48.00" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="700" xml:space="preserve">Inference</text>
+<text x="119.25" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="700" xml:space="preserve"> </text>
+<text x="123.70" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="700" xml:space="preserve">software.</text>
+<text x="194.41" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="700" xml:space="preserve"> </text>
+<text x="198.86" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">On</text>
+<text x="220.20" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="224.66" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">Mac</text>
+<text x="254.88" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="259.33" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">M5</text>
+<text x="281.55" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="286.00" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">Pro,</text>
+<text x="314.84" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="319.30" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">baseline</text>
+<text x="378.78" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="383.23" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">models</text>
+<text x="434.72" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="439.17" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">use</text>
+<text x="464.95" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<a href="https://github.com/ml-explore/mlx-lm/releases/tag/v0.32.2" target="_blank"><text x="469.41" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve">MLX-LM</text></a>
+<a href="https://github.com/ml-explore/mlx-lm/releases/tag/v0.32.2" target="_blank"><text x="528.88" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve"> </text></a>
+<a href="https://github.com/ml-explore/mlx-lm/releases/tag/v0.32.2" target="_blank"><text x="533.33" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve">v0.32.2</text></a>
+<text x="585.80" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">,</text>
+<text x="590.25" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="594.70" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">while</text>
+<text x="631.12" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="635.58" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">Spark-X2.6-1.7B</text>
+<text x="752.39" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="756.84" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">uses</text>
+<text x="790.56" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<a href="https://github.com/XHToken/Spark-MLX-LLM" target="_blank"><text x="795.02" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve">Spark-MLX-LLM</text></a>
+<a href="https://github.com/XHToken/Spark-MLX-LLM" target="_blank"><text x="909.86" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve"> </text></a>
+<a href="https://github.com/XHToken/Spark-MLX-LLM" target="_blank"><text x="914.31" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve">v0.1.0</text></a>
+<text x="957.89" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">.</text>
+<text x="962.34" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="966.80" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">On</text>
+<text x="988.14" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="992.59" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">RTX</text>
+<text x="1024.33" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="1028.78" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">4090,</text>
+<text x="1068.80" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="1073.25" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">all</text>
+<text x="1089.23" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="1093.69" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">models</text>
+<text x="1145.17" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="1149.62" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">use</text>
+<text x="1175.41" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<a href="https://github.com/ggml-org/llama.cpp" target="_blank"><text x="1179.86" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve">ggml-org/llama.cpp</text></a>
+<a href="https://github.com/ggml-org/llama.cpp" target="_blank"><text x="1315.98" y="1352" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve"> </text></a>
+<a href="https://github.com/ggml-org/llama.cpp" target="_blank"><text x="48.00" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve">(48c36110a)</text></a>
+<text x="137.78" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">;</text>
+<text x="142.23" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="146.69" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">an</text>
+<text x="164.47" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="168.92" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">additional</text>
+<text x="237.28" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="241.73" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">Spark</text>
+<text x="283.59" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="288.05" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">variant</text>
+<text x="335.80" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="340.25" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">uses</text>
+<text x="373.97" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<a href="https://github.com/XHToken/llama.cpp" target="_blank"><text x="378.42" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve">XHToken/llama.cpp</text></a>
+<a href="https://github.com/XHToken/llama.cpp" target="_blank"><text x="516.20" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve"> </text></a>
+<a href="https://github.com/XHToken/llama.cpp" target="_blank"><text x="520.66" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve">(master)</text></a>
+<text x="579.94" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">,</text>
+<text x="584.39" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="588.84" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">labeled</text>
+<text x="640.33" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="644.78" y="1376" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">“optimized.”</text>
+<text x="48.00" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="700" xml:space="preserve">Checkpoints</text>
+<text x="144.08" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="700" xml:space="preserve"> </text>
+<text x="148.53" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="700" xml:space="preserve">and</text>
+<text x="176.98" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="700" xml:space="preserve"> </text>
+<text x="181.44" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="700" xml:space="preserve">quantization.</text>
+<text x="280.02" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="700" xml:space="preserve"> </text>
+<text x="284.47" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">All</text>
+<text x="302.23" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="306.69" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">models</text>
+<text x="358.17" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="362.62" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">use</text>
+<text x="388.41" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="392.86" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">4-bit</text>
+<text x="423.97" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="428.42" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">weights.</text>
+<text x="486.61" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="491.06" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">Mac</text>
+<text x="521.28" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="525.73" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">baselines</text>
+<text x="593.16" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="597.61" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">use</text>
+<text x="623.39" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<a href="https://huggingface.co/mlx-community" target="_blank"><text x="627.84" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve">MLX</text></a>
+<a href="https://huggingface.co/mlx-community" target="_blank"><text x="660.73" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve"> </text></a>
+<a href="https://huggingface.co/mlx-community" target="_blank"><text x="665.19" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" font-weight="400" xml:space="preserve">Community</text></a>
+<text x="746.28" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="750.73" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">checkpoints,</text>
+<text x="839.78" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="844.23" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">except</text>
+<text x="890.56" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="895.02" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">Qwen3.5-2B,</text>
+<text x="988.17" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="992.62" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">which</text>
+<text x="1033.50" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="1037.95" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">shares</text>
+<text x="1085.73" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="1090.19" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">Spark’s</text>
+<text x="1143.16" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="1147.61" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">weight</text>
+<text x="1193.50" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="1197.95" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">quantization</text>
+<text x="1283.58" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="1288.03" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">settings.</text>
+<text x="1347.50" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="1351.95" y="1414" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">RTX</text>
+<text x="48.00" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="52.45" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">4090</text>
+<text x="88.02" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="92.47" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">baselines</text>
+<text x="159.89" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="164.34" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">use</text>
+<text x="190.12" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="194.58" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">publicly</text>
+<text x="247.83" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="252.28" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">available</text>
+<text x="314.80" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="319.25" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">Q4_K_M</text>
+<text x="382.38" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="386.83" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">GGUF</text>
+<text x="433.06" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="437.52" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">checkpoints.</text>
+<text x="526.56" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="531.02" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">KV</text>
+<text x="552.58" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="557.03" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">cache</text>
+<text x="599.81" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="604.27" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">types</text>
+<text x="642.69" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="647.14" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">are</text>
+<text x="670.09" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="674.55" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">specified</text>
+<text x="737.66" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="742.11" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">in</text>
+<text x="754.55" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="759.00" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">the</text>
+<text x="781.14" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve"> </text>
+<text x="785.59" y="1438" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#697489" font-weight="400" xml:space="preserve">figure.</text>
+<text x="48" y="1476" font-size="16" fill="#697489" font-weight="600">Code:</text><a href="https://github.com/XHToken/llama.cpp" xlink:href="https://github.com/XHToken/llama.cpp" target="_blank"><text x="100" y="1476" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" text-decoration="underline">https://github.com/XHToken/llama.cpp</text></a><a href="https://github.com/XHToken/Spark-MLX-LLM" xlink:href="https://github.com/XHToken/Spark-MLX-LLM" target="_blank"><text x="420" y="1476" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#3267AA" text-decoration="underline">https://github.com/XHToken/Spark-MLX-LLM</text></a></g></svg>
