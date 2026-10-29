@@ -55,3 +55,29 @@ Model mode sends the issue title and up to 12,000 body characters to the configu
 GitHub Agentic Workflows supports Copilot, Codex and Claude engines. Those are alternatives when deeper repository analysis is useful. Cloud inference credentials and GitHub write identity are separate concerns. This local implementation intentionally retains the user's requested local `gh` write identity. No agent subscription, connector, cloud workflow or model service is enabled by these scripts.
 
 References: [GitHub engines](https://github.github.io/gh-aw/introduction/how-they-work/), [GitHub authentication](https://github.github.io/gh-aw/reference/auth/), [Codex automation authentication](https://learn.chatgpt.com/docs/non-interactive-mode#use-api-key-auth).
+
+## Copilot classification and Gemini alternative
+
+`ai_classifier.py` adds a read-only semantic classifier. Copy `provider.example.json` to the gitignored `provider.local.json`, then set `executable` to a native Copilot CLI executable. The deployed CLI is pinned to official version 1.0.105. Install it without changing global npm packages:
+
+```powershell
+npm.cmd install --prefix ./runtime/copilot --no-audit --no-fund @github/copilot@1.0.105
+```
+
+On Windows x64 the executable is `runtime/copilot/node_modules/@github/copilot-win32-x64/copilot.exe`. Other platforms need their corresponding native executable path. The `model` setting may be left empty for the Copilot CLI default, or set to a model available to your account. An optional `proxy` setting applies only to the Copilot child process.
+
+Copilot uses its documented local `gh` authentication fallback. An isolated CLI home disables inherited plugins/hooks; all model tools and built-in GitHub MCP servers are disabled. The issue prompt goes through stdin, never a shell command. Neither the classifier nor its model can label issues directly; the deterministic local `gh` writer remains responsible for mutations.
+
+Only missing label dimensions are filled. Existing labels remain untouched. To obtain model assessments for existing issues as well, run `python triage.py --assess-all` (preview) or add `--apply` to also sync the board and fill missing dimensions. This does **not** overwrite existing classification labels. `state/latest.json` records the proposed assessment and its source (`copilot`, `gemini`, or `rules-fallback`), confidence, and cache state. Review differences manually before changing existing labels.
+
+The classifier reads the title, up to 12,000 body characters and the latest six comments (up to 1,500 characters each). Valid assessments are cached by input, provider, model and prompt version; changed discussions invalidate the cache. Invalid categories, P0, low confidence (<0.85), missing credentials, timeouts or other provider failures use the existing rules. Valid low-confidence assessments are cached as `ai_suggestion` for review, but cannot set labels. Malformed responses and transport failures are not cached. Request costs/quota depend on the selected account and model; unchanged cached issues do not make another inference request. The deployed scheduled task uses `--assess-all` so new discussion can update suggestions without overwriting existing labels.
+
+To select Gemini instead, use this local configuration and set `GEMINI_API_KEY` securely in the task process environment. Do not add the key to JSON or commit it:
+
+```json
+{"provider": "gemini", "model": "YOUR_ENABLED_GEMINI_MODEL"}
+```
+
+Gemini uses Google's fixed HTTPS compatibility endpoint and receives the same bounded issue evidence without tools. It is an optional alternative, not an automatic second provider. Its adapter has mocked validation/fallback tests; a live Gemini call is required before activating it. Set `{"provider":"rules"}` to disable both AI adapters and return to rules (the legacy compatible endpoint can still be configured separately through environment variables).
+
+References: [Copilot programmatic mode](https://docs.github.com/en/copilot/how-tos/copilot-cli/automate-copilot-cli/run-cli-programmatically), [Copilot authentication fallback](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/authenticate-copilot-cli), [Gemini compatibility API](https://ai.google.dev/gemini-api/docs/openai/).

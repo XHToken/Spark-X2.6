@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 import subprocess
 import urllib.request
+import ai_classifier
 
 REPO = 'XHToken/Spark-X2.6'
 ROOT = Path(__file__).resolve().parent
@@ -230,6 +231,7 @@ def sync_project(config, issue, item):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--apply', action='store_true', help='Write labels and project fields; default is dry-run')
+    parser.add_argument('--assess-all', action='store_true', help='Assess existing issues too; preserve all existing labels')
     parser.add_argument('--project', type=Path, default=ROOT / 'project.json')
     parser.add_argument('--report', type=Path, default=ROOT / 'state' / 'latest.json')
     args = parser.parse_args()
@@ -248,8 +250,15 @@ def main():
             report.append({'number': issue['number'], 'skipped': 'triage-manual'})
             continue
         result = classify(issue)
-        if proposed_labels(issue, result):
-            result = model_classify(issue, result)
+        if proposed_labels(issue, result) or args.assess_all:
+            provider_config = ai_classifier.read_config(ROOT)
+            if provider_config.get('provider', 'rules') in ('copilot', 'gemini'):
+                comments = pages(f'repos/{REPO}/issues/{issue["number"]}/comments') if issue.get('comments') else []
+                issue['triage_comments'] = [{'author': c['user']['login'], 'body': (c.get('body') or '')[:1500]}
+                                            for c in comments[-6:]]
+                result = ai_classifier.assess(issue, result, GROUPS, ROOT, provider_config)
+            else:
+                result = model_classify(issue, result)
         # Re-read before writes so recent manual changes are respected.
         if args.apply:
             issue = api(f'repos/{REPO}/issues/{issue["number"]}')

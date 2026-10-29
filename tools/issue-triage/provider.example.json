@@ -1,0 +1,6 @@
+{
+  "provider": "copilot",
+  "executable": "D:/spark-x26-issue-triage/runtime/copilot/node_modules/@github/copilot-win32-x64/copilot.exe",
+  "model": "",
+  "timeout_seconds": 90
+}
