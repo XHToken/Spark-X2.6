@@ -10,6 +10,8 @@ try {
 }
 try {
     $env:PYTHONUTF8 = '1'
+    [Console]::OutputEncoding = [Text.UTF8Encoding]::new($false)
+    $OutputEncoding = [Console]::OutputEncoding
     $runtimeConfig = Get-Content -LiteralPath (Join-Path $taskRoot 'runtime.json') -Raw | ConvertFrom-Json
     $env:Path = $runtimeConfig.ghDirectory + ';' + $env:Path
     & $runtimeConfig.python -u (Join-Path $taskRoot 'triage.py') --apply *> (Join-Path $stateRoot 'last-run.log')
