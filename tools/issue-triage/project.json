@@ -1,0 +1,69 @@
+{
+  "id": "PVT_kwDOEsRlBs4BpOdT",
+  "title": "Spark-X2.6 | Issue Triage & Delivery",
+  "closed": false,
+  "url": "https://github.com/orgs/XHToken/projects/1",
+  "number": 1,
+  "fields": {
+    "Status": {
+      "id": "PVTSSF_lADOEsRlBs4BpOdTzhnrCFU",
+      "options": {
+        "Triage": "086cc932",
+        "Ready": "12418dea",
+        "In progress": "e675c83a",
+        "Blocked": "d232e798",
+        "In review": "8353df98",
+        "Done": "b1febbeb"
+      }
+    },
+    "Area": {
+      "id": "PVTSSF_lADOEsRlBs4BpOdTzhnrCGE",
+      "options": {
+        "inference": "f15d4506",
+        "quantization": "1c66a79b",
+        "evaluation": "21e697d1",
+        "docs": "507a9d5f",
+        "community": "ba9f8cfc",
+        "agent": "8303e655",
+        "other": "1050dfda"
+      }
+    },
+    "Priority": {
+      "id": "PVTSSF_lADOEsRlBs4BpOdTzhnrCGI",
+      "options": {
+        "p0": "e1b0ea50",
+        "p1": "2887ebff",
+        "p2": "12fdd069",
+        "p3": "ade2ea84"
+      }
+    },
+    "Effort": {
+      "id": "PVTSSF_lADOEsRlBs4BpOdTzhnrCGM",
+      "options": {
+        "s": "83e8f087",
+        "m": "58253e94",
+        "l": "bae0bf71",
+        "unknown": "c643f84b"
+      }
+    },
+    "Risk": {
+      "id": "PVTSSF_lADOEsRlBs4BpOdTzhnrCGw",
+      "options": {
+        "low": "e6a47c7b",
+        "medium": "a6d8684f",
+        "high": "168f0f2b",
+        "unknown": "e3268075"
+      }
+    },
+    "Triage": {
+      "id": "PVTSSF_lADOEsRlBs4BpOdTzhnrCIE",
+      "options": {
+        "needs-review": "a47d0d2c",
+        "needs-info": "5822ff86",
+        "core": "d10a02ff",
+        "agent-ready": "9646acd7",
+        "deferred": "420c5412"
+      }
+    }
+  }
+}
