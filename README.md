@@ -24,7 +24,7 @@ Welcome to the GitHub repository of Spark-X2.6 open model series. You can find o
 
 ## Frequently Asked Questions
 
-See the [Spark-X2.6 FAQ / 常见问题](FAQ.md) for image-input support, local runtime choices, DSpark requirements and final-result validation.
+See the [Spark-X2.6 FAQ / 常见问题](https://github.com/XHToken/Spark-X2.6/wiki/FAQ) for image-input support, local runtime choices, DSpark requirements and final-result validation.
 
 ## Introduction
 Building on the Spark-X2.5, we introduce **Spark-X2.6-4B&1.7B**, the latest generation of our compact, general-purpose language models for on-device deployment. Spark-X2.6 retains exactly the same architecture as Spark-X2.5, achieving its capability gains through improved post-training. It delivers substantial improvements in coding, agent, long-context, multilingual, reasoning, etc. These advances enable more capable and practical on-device AI for developers and users tackling real-world tasks.
